@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYC Taxi Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+        #zones-map { height: 400px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>NYC Taxi Dashboard</h1>
+
+    <div id="trips-summary"></div>
+    <div id="trips-chart"></div>
+    <div id="zones-map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+
+</body>
+</html>

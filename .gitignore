@@ -1,0 +1,4 @@
+backend/nyc_taxi.db
+__pycache__/
+*.pyc
+*.parquet
