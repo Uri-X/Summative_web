@@ -20,11 +20,11 @@ if not os.path.exists(trips_file):
 if not os.path.exists(zones_file):
     raise FileNotFoundError(f"Zones file not found at {zones_file}")
 
-# --- 5. Load raw data ---
+# --- 5. Loading raw data 
 trips = pd.read_parquet(trips_file)
 zones = pd.read_csv(zones_file)
 
-# --- 6. Clean data and create features ---
+# --- 6. Cleaning
 trips = clean_trips(trips)
 trips = add_features(trips)
 
