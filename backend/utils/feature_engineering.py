@@ -3,7 +3,7 @@ def add_features(trips):
     trips['speed'] = trips['trip_distance'] / (trips['trip_duration']/60)
     trips['fare_per_mile'] = trips['total_amount'] / trips['trip_distance']
     
-    # Rename columns to match database schema
+    # Rename columns to match db schema
     trips.rename(columns={
         'tpep_pickup_datetime': 'pickup_datetime',
         'tpep_dropoff_datetime': 'dropoff_datetime',
