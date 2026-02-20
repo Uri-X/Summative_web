@@ -4,7 +4,7 @@ Dashboard and API for analyzing NYC Yellow Taxi trip data (pickups, fares, zones
 
 data source: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page:
 
-# 🚕 NYC Taxi Dashboard
+# NYC Taxi Dashboard
 
 An enterprise-level fullstack web application for exploring urban mobility patterns using the NYC Taxi & Limousine Commission (TLC) trip dataset. Built with Flask, SQLite, and vanilla JavaScript with Chart.js and Leaflet.
 
