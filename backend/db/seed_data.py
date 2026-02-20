@@ -2,11 +2,11 @@ import os
 import pandas as pd
 import sqlite3
 
-# --- 1. Absolute imports for utils ---
+# Absolute imports for utils modules
 from backend.utils.data_cleaning import clean_trips
 from backend.utils.feature_engineering import add_features
 
-# --- 2. Define project root and data folder ---
+# Defining project root and data folder here
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 
