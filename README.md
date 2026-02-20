@@ -12,7 +12,7 @@ An enterprise-level fullstack web application for exploring urban mobility patte
 
 ## 📽️ Video Walkthrough
 
-[Watch the video walkthrough here](#) ← replace with your link
+[Watch the video walkthrough here]
 
 ---
 
