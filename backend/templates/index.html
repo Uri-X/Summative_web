@@ -3,21 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>NYC Taxi Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-    <style>
-        #zones-map { height: 400px; margin-top: 20px; }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>NYC Taxi Dashboard</h1>
+    <header>
+        <h1>Taxi_App Dashboard</h1>
+        <p class="subtitle">Urban Mobility Insights</p>
+    </header>
 
-    <div id="trips-summary"></div>
-    <div id="trips-chart"></div>
-    <div id="zones-map"></div>
+    <main>
+        <!-- KPI Summary Cards -->
+        <section id="summary-section">
+            <h2>Trip Summary</h2>
+            <div id="summary-cards" class="cards-grid">
+                <div class="card" id="card-total">
+                    <span class="card-label">Total Trips</span>
+                    <span class="card-value" id="val-total">—</span>
+                </div>
+                <div class="card" id="card-fare">
+                    <span class="card-label">Avg Fare</span>
+                    <span class="card-value" id="val-fare">—</span>
+                </div>
+                <div class="card" id="card-distance">
+                    <span class="card-label">Avg Distance (mi)</span>
+                    <span class="card-value" id="val-distance">—</span>
+                </div>
+                <div class="card" id="card-duration">
+                    <span class="card-label">Avg Duration (min)</span>
+                    <span class="card-value" id="val-duration">—</span>
+                </div>
+                <div class="card" id="card-speed">
+                    <span class="card-label">Avg Speed (mph)</span>
+                    <span class="card-value" id="val-speed">—</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trips by Hour Chart -->
+        <section class="chart-section">
+            <h2>Trips by Hour of Day</h2>
+            <canvas id="hourChart"></canvas>
+        </section>
+
+        <!-- Trips by Borough Chart -->
+        <section class="chart-section">
+            <h2>Trips by Borough</h2>
+            <canvas id="boroughChart"></canvas>
+        </section>
+
+        <!-- Top Pickup Zones -->
+        <section class="chart-section">
+            <h2>Top 10 Pickup Zones</h2>
+            <canvas id="zonesChart"></canvas>
+        </section>
+
+        <!-- Zones Map -->
+        <section class="chart-section">
+            <h2>Taxi Zones Map</h2>
+            <div id="zones-map"></div>
+        </section>
+    </main>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
-
 </body>
 </html>
