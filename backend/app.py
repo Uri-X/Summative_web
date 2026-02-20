@@ -1,6 +1,6 @@
 from flask import Flask, render_template
-from backend.routes.trips import trips_bp
-from backend.routes.zones import zones_bp
+from routes.trips import trips_bp
+from routes.zones import zones_bp
 
 app = Flask(__name__)
 
